@@ -12,6 +12,11 @@ public class Cliente extends Cadastro {
 
     }
 
+   Cliente(String nome, String endereco, String email, String telefone, String cpf) {
+		super(nome, endereco, email, telefone, cpf);
+		this.cpf = cpf;
+		
+	}
     public String getCpf () {
         return cpf;
     }
