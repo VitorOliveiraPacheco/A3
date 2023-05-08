@@ -1,17 +1,11 @@
 public class Cliente extends Cadastro {
    
-    private String cpf;
+   pivate String cpf;
 
-    Cliente (String cpf, super(String nome, String endereco, String email, String telefone)) {
-
-        this.cpf=cpf;
-        this.nome = nome;
-        this.endereco = endereco;
-        this.email = email;
-        this.telefone = telefone;
-
+   Cliente(String nome, String endereco, String email, String telefone, String cpf) {
+	super(nome, endereco, email, telefone, cpf);
+	this.cpf = cpf;	
     }
-
     public String getCpf () {
         return cpf;
     }
