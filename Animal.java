@@ -1,5 +1,5 @@
 
-public class Animal {
+public class Animal extends Cliente {
 
 	private String raca;
 	private String porte;
