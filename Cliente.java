@@ -1,11 +1,19 @@
-public class Cliente extends Cadastro {
-   
-   pivate String cpf;
+package A3;
 
-   Cliente(String nome, String endereco, String email, String telefone, String cpf) {
-	super(nome, endereco, email, telefone, cpf);
-	this.cpf = cpf;	
-    }
+import javax.swing.JOptionPane;
+
+public class Cliente extends Cadastro {
+
+	private String cpf;
+	
+	Cliente (){
+	}
+    Cliente(String nome, String endereco, String email, String telefone, String cpf, String numRegistro) {
+		super(nome, endereco, email, telefone, cpf);
+		this.cpf = cpf;
+		
+	}
+
     public String getCpf () {
         return cpf;
     }
@@ -35,5 +43,10 @@ public class Cliente extends Cadastro {
 
         //Parte funcional ainda não foi feita.
 
+    }
+    
+    public void mostrarcliente() {
+    	JOptionPane.showMessageDialog(null, "☰ Olá, " + this.getNome() + ", este é o seu cadastro: \n ▶ Nome: " + this.getNome() + 
+    			"\n ▶ Endereço: " + this.getEndereco() + "\n ▶ Email: " + this.getEmail() + "\n ▶ Telefone: " + this.getTelefone() + "\n ▶ CPF: " + this.getCpf());	
     }
 }

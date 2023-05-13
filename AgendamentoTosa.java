@@ -1,20 +1,21 @@
+package A3;
+
 public class AgendamentoTosa extends AgendamentoBanho {
 
-	private Double valor;
+	private double valortosa;
 	private String tipoTosa;
 	
-	AgendamentoTosa (Double valor, String tipoTosa) {
-		this.valor = valor;
+	AgendamentoTosa (double valortosa, double tipotosa) {
+		this.valortosa = valortosa;
 		this.tipoTosa = tipoTosa;
-	
 	}
 
-	public Double getValor() {
-		return valor;
+	public double getValortosa() {
+		return valortosa;
 	}
 
-	public void setValor(Double valor) {
-		this.valor = valor;
+	public void setValortosa(double valortosa) {
+		this.valortosa = valortosa;
 	}
 
 	public String getTipoTosa() {
@@ -25,6 +26,4 @@ public class AgendamentoTosa extends AgendamentoBanho {
 		this.tipoTosa = tipoTosa;
 	}
 	
-	
 }
-

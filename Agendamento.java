@@ -1,3 +1,5 @@
+package A3;
+
 import java.sql.Date;
 
 public class Agendamento {
@@ -6,7 +8,9 @@ public class Agendamento {
 	private Date horario;
 	private String tipoAgend;
 	
-	Agendamento (Date data, Date horario, String tipoAgend) {
+	Agendamento(){
+	}
+	Agendamento (Date data, Date horario, String tipoAgend, double valor, double valortosa, double tipotosa) {
 		this.data = data;
 		this.horario = horario;
 		this.tipoAgend = tipoAgend;
@@ -34,4 +38,3 @@ public class Agendamento {
 	
 	
 }
-

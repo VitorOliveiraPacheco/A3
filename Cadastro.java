@@ -1,3 +1,5 @@
+package A3;
+
 public class Cadastro {
 
     private String nome;
@@ -5,7 +7,10 @@ public class Cadastro {
     private String email;
     private String telefone;
 
-    Cadastro (String nome, String endereco, String email, String telefone) {
+    Cadastro (){
+    }
+    Cadastro (String nome, String endereco, String email, String telefone, String cpf) {
+    	super();
         this.nome = nome;
         this.endereco = endereco;
         this.email = email;
