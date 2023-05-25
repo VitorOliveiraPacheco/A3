@@ -2,23 +2,23 @@ package A3;
 
 public class AgendamentoTosa extends AgendamentoBanho {
 
-	private double valortosa;
-	private String tipoTosa;
+	private int valortosa;
+	private String tosa;
 	
-	AgendamentoTosa (double valortosa, double tipotosa) {
+	AgendamentoTosa (int valortosa, String tosa) {
 		this.valortosa = valortosa;
-		this.tipoTosa = tipoTosa;
+		this.tosa = tosa;
 	}
-	public double getValortosa() {
+	public int getvalortosa() {
 		return valortosa;
 	}
-	public void setValortosa(double valortosa) {
+	public void setvalortosa(int valortosa) {
 		this.valortosa = valortosa;
 	}
-	public String getTipoTosa() {
-		return tipoTosa;
+	public String gettosa() {
+		return tosa;
 	}
-	public void setTipoTosa(String tipoTosa) {
-		this.tipoTosa = tipoTosa;
+	public void settosa(String tosa) {
+		this.tosa = tosa;
 	}
 }
