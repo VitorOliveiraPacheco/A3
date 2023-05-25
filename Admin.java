@@ -2,7 +2,7 @@ package A3;
 
 public class Admin extends Cliente {
 
-    private String numRegistro;
+    private String numRegistro = null;
     
     Admin(){
     }
@@ -14,13 +14,7 @@ public class Admin extends Cliente {
     public String getNumRegistro() {
 		return numRegistro;
 	}
-	public void setNumRegistro(String numRegistro) {
-		this.numRegistro = numRegistro;
+	public String setNumRegistro(String numRegistro) {
+		return this.numRegistro = numRegistro;
 	}
-	public Cliente[] getListaCliente (){
-		return null;
-        
-        // metódo para listar
-        // os clientes da petshop
-    }
 }
