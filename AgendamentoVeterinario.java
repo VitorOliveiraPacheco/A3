@@ -1,30 +1,26 @@
 package A3;
 
 public class AgendamentoVeterinario {
-	private String tipoconsulta; //tipo: consulta "preventiva" ou de vacinação
+	private int tipoconsulta;
 	private String diavet;
 	
-	AgendamentoVeterinario(String tipoconsulta, String diavet, String tipovacina){
+	AgendamentoVeterinario(){
+	}
+	AgendamentoVeterinario(int tipoconsulta, String diavet, int tipovacina){
 		this.tipoconsulta= tipoconsulta;
 		this.diavet= diavet;
 	}
 
-	public AgendamentoVeterinario() {
-	}
-
-	public String getTipoconsulta() {
+	public int getTipoconsulta() {
 		return tipoconsulta;
 	}
-
-	public void setTipoconsulta(String tipoconsulta) {
+	public void setTipoconsulta(int tipoconsulta) {
 		this.tipoconsulta = tipoconsulta;
 	}
 	public String getdiavet() {
 		return diavet;
 	}
-
 	public void setdiavet(String diavet) {
 		this.diavet = diavet;
 	}
-	
 }
