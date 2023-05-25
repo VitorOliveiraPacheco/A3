@@ -7,6 +7,7 @@ public class Animal extends Cliente{
 	private double peso;
 	private int idade;
 	private String vacina;
+	
 	Animal(){
 	}
 	Animal (String nomepet, String raca, String porte, double peso, int idade, String vacina) {
