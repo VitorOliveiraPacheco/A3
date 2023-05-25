@@ -2,21 +2,19 @@ package A3;
 
 public class AgendamentoBanho extends Agendamento {
 
-	private double valor;
+	private int valor = 40;
 	private String diabanho;
 
 	AgendamentoBanho(){
 	}
-	AgendamentoBanho(double valor, double valortosa, double tipotosa, String diabanho){
+	AgendamentoBanho(int valor, String diabanho){
 		this.valor=valor;
 		this.diabanho= diabanho;
 	}
-
-	public double getValor() {
+	public int getValor() {
 		return valor;
 	}
-
-	public void setValor(double valor) {
+	public void setValor(int valor) {
 		this.valor = valor;
 	}
 	public String getdiabanho() {
@@ -25,5 +23,4 @@ public class AgendamentoBanho extends Agendamento {
 	public void setdiabanho(String diabanho) {
 		this.diabanho = diabanho;
 	}
-	
 }
