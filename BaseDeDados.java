@@ -18,7 +18,6 @@ public class BaseDeDados {
 		}catch (Exception e) {
 			throw new Exception("Ocorreu um erro na conexão");
 		}
-		
 	}
 	
 	public void fecharConexao() {
@@ -128,12 +127,13 @@ public class BaseDeDados {
 		}
 	}
 	
-	public void alteraragendVET08(AgendamentoVeterinario agendVET, Animal animal) {		
-		PreparedStatement psUpdate = null;		
+	public void alteraragendVET08(AgendamentoVeterinario agendVET, Animal animal, Vacina vacina) {		
+		PreparedStatement psUpdate = null;
+		String nome = (animal.getnomepet() + vacina.getvacina());
 		try {
 			String dia = agendVET.getdiavet();
 			psUpdate = conexao.prepareStatement("update agendVET set 08HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -141,12 +141,13 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendVET09(AgendamentoVeterinario agendVET, Animal animal) {		
-		PreparedStatement psUpdate = null;		
+	public void alteraragendVET09(AgendamentoVeterinario agendVET, Animal animal, Vacina vacina) {		
+		PreparedStatement psUpdate = null;	
+		String nome = (animal.getnomepet() + vacina.getvacina());
 		try {
 			String dia = agendVET.getdiavet();
 			psUpdate = conexao.prepareStatement("update agendVET set 09HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -154,12 +155,13 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendVET10(AgendamentoVeterinario agendVET, Animal animal) {		
-		PreparedStatement psUpdate = null;		
+	public void alteraragendVET10(AgendamentoVeterinario agendVET, Animal animal, Vacina vacina) {		
+		PreparedStatement psUpdate = null;
+		String nome = (animal.getnomepet() + vacina.getvacina());
 		try {
 			String dia = agendVET.getdiavet();
 			psUpdate = conexao.prepareStatement("update agendVET set 10HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -167,12 +169,13 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendVET11(AgendamentoVeterinario agendVET, Animal animal) {		
+	public void alteraragendVET11(AgendamentoVeterinario agendVET, Animal animal, Vacina vacina) {		
 		PreparedStatement psUpdate = null;		
+		String nome = (animal.getnomepet() + vacina.getvacina());
 		try {
 			String dia = agendVET.getdiavet();
 			psUpdate = conexao.prepareStatement("update agendVET set 11HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -180,12 +183,13 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendPET13(AgendamentoBanho agendPET, Animal animal) {		
-		PreparedStatement psUpdate = null;		
+	public void alteraragendPET13(AgendamentoBanho agendPET, Animal animal, AgendamentoTosa agendtosa) {		
+		PreparedStatement psUpdate = null;
+		String nome = animal.getnomepet() + agendtosa.gettosa();
 		try {
 			String dia = agendPET.getdiabanho();
 			psUpdate = conexao.prepareStatement("update agendPET set 13HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -193,12 +197,13 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendPET14(AgendamentoBanho agendPET, Animal animal) {		
-		PreparedStatement psUpdate = null;		
+	public void alteraragendPET14(AgendamentoBanho agendPET, Animal animal, AgendamentoTosa agendtosa) {		
+		PreparedStatement psUpdate = null;
+		String nome = animal.getnomepet() + agendtosa.gettosa();
 		try {
 			String dia = agendPET.getdiabanho();
 			psUpdate = conexao.prepareStatement("update agendPET set 14HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -206,12 +211,13 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendPET15(AgendamentoBanho agendPET, Animal animal) {		
+	public void alteraragendPET15(AgendamentoBanho agendPET, Animal animal, AgendamentoTosa agendtosa) {		
 		PreparedStatement psUpdate = null;		
+		String nome = animal.getnomepet() + agendtosa.gettosa();
 		try {
 			String dia = agendPET.getdiabanho();
 			psUpdate = conexao.prepareStatement("update agendPET set 15HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -219,12 +225,13 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendPET16(AgendamentoBanho agendPET, Animal animal) {		
+	public void alteraragendPET16(AgendamentoBanho agendPET, Animal animal, AgendamentoTosa agendtosa) {		
 		PreparedStatement psUpdate = null;		
+		String nome = animal.getnomepet() + agendtosa.gettosa();
 		try {
 			String dia = agendPET.getdiabanho();
 			psUpdate = conexao.prepareStatement("update agendPET set 16HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
@@ -232,18 +239,37 @@ public class BaseDeDados {
 			this.liberar(psUpdate);
 		}
 	}
-	public void alteraragendPET17(AgendamentoBanho agendPET, Animal animal) {		
-		PreparedStatement psUpdate = null;		
+	public void alteraragendPET17(AgendamentoBanho agendPET, Animal animal, AgendamentoTosa agendtosa) {		
+		PreparedStatement psUpdate = null;	
+		String nome = animal.getnomepet() + agendtosa.gettosa();
 		try {
 			String dia = agendPET.getdiabanho();
 			psUpdate = conexao.prepareStatement("update agendPET set 17HR = ? where dia = '"+dia+"'");
-			psUpdate.setString(1, animal.getnomepet());
+			psUpdate.setString(1, nome);
 			psUpdate.executeUpdate();
 			}catch (Exception e){
 			 e.printStackTrace();
 		}finally {
 			this.liberar(psUpdate);
 		}
+	}
+	public List<Admin> listarTodosAdmin(Admin admin){
+		List<Admin> administradores = new ArrayList<Admin>();
+		String Admin = "001";
+		PreparedStatement psSelect = null;
+		try {
+			psSelect = conexao.prepareStatement("SELECT * FROM administrador Where numreg='" + Admin + "'");
+			ResultSet rs = psSelect.executeQuery();
+			while (rs.next()) {
+				String nome = rs.getString("nome");
+				administradores.add(new Admin(nome, nome, nome, nome, nome, nome));		
+			}
+		}catch (Exception e){
+			 e.printStackTrace();
+		}finally {
+			this.liberar(psSelect);
+		}
+		return administradores;
 	}
 }
 
