@@ -41,7 +41,7 @@ numreg int primary key not null unique,
 nome varchar (30)
 );
 
-inserto into cliente (cpf, nome) vales ('1023', 'Jenison');
+insert into cliente (cpf, nome) vales ('1023', 'Jenison');
 
 insert into agendVET (dia)  values (STR_TO_DATE('03/07/2023','%d/%m/%Y'));
 insert into agendVET (dia)  values (STR_TO_DATE('04/07/2023','%d/%m/%Y'));
