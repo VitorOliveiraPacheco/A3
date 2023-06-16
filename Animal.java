@@ -1,16 +1,19 @@
 package A3;
 
+import javax.swing.JTextField;
+
 public class Animal extends Cliente{
-	private String nomepet;
-	private String raca;
-	private String porte;
-	private double peso;
-	private int idade;
-	private String vacina;
+
+	private JTextField nomepet;
+	private JTextField raca;
+	private JTextField porte;
+	private JTextField peso;
+	private JTextField idade;
+	private JTextField vacina;
 	
 	Animal(){
 	}
-	Animal (String nomepet, String raca, String porte, double peso, int idade, String vacina) {
+	Animal (JTextField nomepet, JTextField raca, JTextField porte, JTextField peso, JTextField idade, JTextField vacina) {
 		this.nomepet = nomepet;
 		this.raca= raca;
 		this.porte= porte;
@@ -18,40 +21,40 @@ public class Animal extends Cliente{
 		this.idade= idade;
 		this.vacina= vacina;
 	}
-	public String getnomepet() {
+	public JTextField getnomepet() {
 		return nomepet;
 	}
-	public void setnomepet(String nomepet) {
-		this.nomepet = nomepet;
+	public JTextField setnomepet (JTextField nomepet) {
+		return this.nomepet = nomepet;
 	}
-	public String getraca() {
+	public JTextField getraca() {
 		return raca;
 	}
-	public void setraca(String raca) {
-		this.raca = raca;
+	public JTextField setraca(JTextField raca) {
+		return this.raca = raca;
 	}
-	public String getporte() {
+	public JTextField getporte() {
 		return porte;
 	}
-	public void setporte(String porte) {
-		this.porte = porte;
+	public JTextField setporte(JTextField porte) {
+		return this.porte = porte;
 	}
-	public double getpeso() {
+	public JTextField getpeso() {
 		return peso;
 	}
-	public void setpeso(double peso) {
-		this.peso = peso;
+	public JTextField setpeso(JTextField peso) {
+		return this.peso = peso;
 	}
-	public int getidade() {
+	public JTextField getidade() {
 		return idade;
 	}
-	public void setidade(int idade) {
-		this.idade = idade;
+	public JTextField setidade(JTextField idade) {
+		return this.idade = idade;
 	}
-	public String getvacina() {
+	public JTextField getvacina() {
 		return vacina;
 	}
-	public void setvacina(String vacina) {
-		this.vacina = vacina;
+	public JTextField setvacina(JTextField vacina) {
+		return this.vacina = vacina;
 	}
 }
