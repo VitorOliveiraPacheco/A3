@@ -16,24 +16,25 @@ raca varchar (20) not null,
 porte varchar (20) not null,
 idade varchar (5) not null,
 peso varchar (5) not null,
-vacina varchar (10) not null
+vacina varchar (10) not null,
+cpf varchar (11) not null
 );
 
 create table agendVET(
 dia DATE primary key not null unique,
-08HR varchar (50),
-09HR varchar (50),
-10HR varchar (50),
-11HR varchar (50)
+8_AM varchar (50),
+9_AM varchar (50),
+10_AM varchar (50),
+11_AM varchar (50)
 );
 
 create table agendPET(
 dia DATE primary key not null unique,
-13HR varchar (50),
-14HR varchar (50),
-15HR varchar (50),
-16HR varchar (50),
-17HR varchar (50)
+13_PM varchar (50),
+14_PM varchar (50),
+15_PM varchar (50),
+16_PM varchar (50),
+17_PM varchar (50)
 );
 
 create table administrador(
@@ -41,42 +42,38 @@ numreg int primary key not null unique,
 nome varchar (30)
 );
 
-insert into cliente (cpf, nome) vales ('1023', 'Jenison');
-
 insert into agendVET (dia)  values (STR_TO_DATE('03/07/2023','%d/%m/%Y'));
 insert into agendVET (dia)  values (STR_TO_DATE('04/07/2023','%d/%m/%Y'));
 insert into agendVET (dia)  values (STR_TO_DATE('05/07/2023','%d/%m/%Y'));
 insert into agendVET (dia)  values (STR_TO_DATE('06/07/2023','%d/%m/%Y'));
-update agendVET set 09HR = 'Ozzy- Com Vacina' where dia = '2023-07-04';
-update agendVET set 09HR = 'Bruce- Sem Vacina' where dia = '2023-07-05';
-update agendVET set 10HR = 'Theo- Sem Vacina' where dia = '2023-07-05';
-update agendVET set 11HR = 'Mike- Com Vacina' where dia = '2023-07-05';
-update agendVET set 09HR = 'Simba- Com Vacina' where dia = '2023-07-06';
+update agendVET set 9_AM = 'Ozzy' where dia = '2023-07-04';
+update agendVET set 11_AM = 'Mell' where dia = '2023-07-04';
+update agendVET set 9_AM = 'Bruce' where dia = '2023-07-05';
+update agendVET set 10_AM = 'Theo' where dia = '2023-07-05';
+update agendVET set 11_AM = 'Mike' where dia = '2023-07-05';
+update agendVET set 9_AM = 'Simba' where dia = '2023-07-06';
 
 insert into agendPET (dia)  values (STR_TO_DATE('05/07/2023','%d/%m/%Y'));
 insert into agendPET (dia)  values (STR_TO_DATE('06/07/2023','%d/%m/%Y'));
 insert into agendPET (dia)  values (STR_TO_DATE('07/07/2023','%d/%m/%Y'));
-update agendPET set 16HR = 'Zeca- Com Tosa' where dia = '2023-07-05';
-update agendPET set 13HR = 'Buddy- Com Tosa' where dia = '2023-07-06';
-update agendPET set 17HR = 'Frederico- Sem Tosa' where dia = '2023-07-06';
-update agendPET set 14HR = 'Bidu- Com Tosa' where dia = '2023-07-07';
-update agendPET set 15HR = 'Scooby' where dia = '2023-07-07';
-update agendPET set 16HR = 'Lord- Sem Tosa' where dia = '2023-07-07';
-update agendPET set 17HR = 'Apolo- Com Tosa' where dia = '2023-07-07';
+update agendPET set 16_PM = 'Zeca' where dia = '2023-07-05';
+update agendPET set 13_PM = 'Buddy' where dia = '2023-07-06';
+update agendPET set 17_PM = 'Frederico' where dia = '2023-07-06';
+update agendPET set 14_PM = 'Bidu' where dia = '2023-07-07';
+update agendPET set 15_PM = 'Scooby' where dia = '2023-07-07';
+update agendPET set 16_PM = 'Lord' where dia = '2023-07-07';
+update agendPET set 17_PM = 'Apolo' where dia = '2023-07-07';
 
-insert into administrador (numreg, nome) values (1, 'Jenison');
-insert into administrador (numreg, nome) values (2, 'Katrine');
-insert into administrador (numreg, nome) values (3, 'Manuela');
-insert into administrador (numreg, nome) values (4, 'Pedro');
-insert into administrador (numreg, nome) values (5, 'Richard');
-insert into administrador (numreg, nome) values (6, 'Thaynara');
-insert into administrador (numreg, nome) values (7, 'Vitor');
+insert into administrador (numreg, nome) values (1151, 'Jenison Schmitt');
+insert into administrador (numreg, nome) values (2789, 'Katrine Corrêa');
+insert into administrador (numreg, nome) values (3578, 'Manuela Toews');
+insert into administrador (numreg, nome) values (4156, 'Pedro Pilla');
+insert into administrador (numreg, nome) values (5795, 'Richard Santos');
+insert into administrador (numreg, nome) values (6175, 'Thaynara Leverge');
+insert into administrador (numreg, nome) values (7796, 'Vitor Oliveira');
 
 Select * from animal;
 SELECT * FROM cliente;
 select * from agendVET;
 select * from agendPET;
 select * from administrador;
-
-
-
