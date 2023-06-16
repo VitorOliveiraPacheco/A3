@@ -1,15 +1,17 @@
 package A3;
 
-public class AgendamentoBanho extends Agendamento {
+public class AgendamentoPet {
 
-	private int valor = 40;
+	private int valor;
 	private String diabanho;
+	private String horabanho;
 
-	AgendamentoBanho(){
+	AgendamentoPet(){
 	}
-	AgendamentoBanho(int valor, String diabanho){
+	AgendamentoPet(int valor, String diabanho, String horabanho){
 		this.valor=valor;
 		this.diabanho= diabanho;
+		this.horabanho= horabanho;
 	}
 	public int getValor() {
 		return valor;
@@ -22,5 +24,11 @@ public class AgendamentoBanho extends Agendamento {
 	}
 	public void setdiabanho(String diabanho) {
 		this.diabanho = diabanho;
+	}
+	public String gethorabanho() {
+		return horabanho;
+	}
+	public void sethorabanho(String horabanho) {
+		this.horabanho = horabanho;
 	}
 }
