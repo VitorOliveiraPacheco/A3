@@ -1,20 +1,31 @@
 package A3;
 
+import javax.swing.JTextField;
+
+
 public class Admin extends Cliente {
 
-    private String numRegistro = null;
-    
+	private JTextField numregistro;
+	private JTextField nome;
+
     Admin(){
     }
-    Admin(String nome, String endereco, String email, String telefone, String cpf, String numRegistro) {
-		super(nome, endereco, email, telefone, cpf);
-		this.numRegistro = numRegistro;
-		
+    Admin(JTextField nome, JTextField numregistro) {
+		super();
+		this.numregistro = numregistro;
+		this.nome= nome;
 	}
-    public String getNumRegistro() {
-		return numRegistro;
+
+    public JTextField getnumregistro() {
+		return numregistro;
 	}
-	public String setNumRegistro(String numRegistro) {
-		return this.numRegistro = numRegistro;
+	public JTextField setnumregistro(JTextField numregistro) {
+		return this.numregistro = numregistro;
+	}
+	public JTextField getnome() {
+		return nome;
+	}
+	public JTextField setnome(JTextField nome) {
+		return this.nome = nome;
 	}
 }
