@@ -1,18 +1,18 @@
 package A3;
 
+import javax.swing.JTextField;
 
-public class Cliente extends Cadastro {
+public class Cliente {
 
-	private String cpf;
-	private String nome;
-    private String endereco;
-    private String email;
-    private String telefone;
+	private JTextField cpf;
+	private JTextField nome;
+    private JTextField endereco;
+    private JTextField email;
+    private JTextField telefone;
 
 	Cliente (){
 	}
-    Cliente(String nome, String endereco, String email, String telefone, String cpf) {
-		super(nome, endereco, email, telefone, cpf);
+    Cliente(JTextField nome, JTextField endereco, JTextField email, JTextField telefone, JTextField cpf) {
 		this.cpf = cpf;
 		this.nome= nome;
 		this.endereco= endereco;
@@ -20,51 +20,35 @@ public class Cliente extends Cadastro {
 		this.telefone= telefone;
 	}
     
-	public String getcpf () {
+	public JTextField getcpf () {
         return cpf;
     }
-    public void setcpf (String cpf) {
-        this.cpf= cpf;
+    public JTextField setcpf (JTextField cpf) {
+        return this.cpf= cpf;
     }
-	public String getnome() {
+	public JTextField getnome() {
 		return nome;
 	}
-	public void setnome(String nome) {
-		this.nome = nome;
+	public JTextField setnome(JTextField nome) {
+		return this.nome = nome;
 	}
-	public String getendereco() {
+	public JTextField getendereco() {
 		return endereco;
 	}
-	public void setendereco(String endereco) {
-		this.endereco = endereco;
+	public JTextField setendereco(JTextField endereco) {
+		return this.endereco = endereco;
 	}
-	public String getemail() {
+	public JTextField getemail() {
 		return email;
 	}
-	public void setemail(String email) {
-		this.email = email;
+	public JTextField setemail(JTextField email) {
+		return this.email = email;
 	}
-	public String gettelefone() {
+	public JTextField gettelefone() {
 		return telefone;
 	}
-	public void settelefone(String telefone) {
-		this.telefone = telefone;
+	public JTextField settelefone(JTextField telefone) {
+		return this.telefone = telefone;
 	}
-
-    // Nessa parte será feito um validador do CPF. 
-    // Ele será utilizado para verificar  
-    // se o CPF digitado é válido para ai sim usar o setCpf.
-
-    public boolean verificarCpf () {
-        
-        //Parte funcional ainda não foi feita.
-    
-        return true;
-    }
-    /*public void mostrarcliente() {
-    	JOptionPane.showMessageDialog(null, "☰ Olá, " + this.getNome() + ", este é o seu cadastro: \n ▶ Nome: " + this.getNome() + 
-    			"\n ▶ Endereço: " + this.getEndereco() + "\n ▶ Email: " + this.getEmail() + "\n ▶ Telefone: " + this.getTelefone() + "\n ▶ CPF: " + this.getCpf());*/	
-
-
-
 }
+
