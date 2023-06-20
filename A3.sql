@@ -17,7 +17,7 @@ porte varchar (20) not null,
 idade varchar (5) not null,
 peso varchar (5) not null,
 vacina varchar (10) not null,
-cpf varchar (11) not null
+cpf_ varchar (11) not null
 );
 
 create table agendVET(
@@ -77,3 +77,8 @@ SELECT * FROM cliente;
 select * from agendVET;
 select * from agendPET;
 select * from administrador;
+
+
+
+
+
